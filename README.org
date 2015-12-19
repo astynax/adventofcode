@@ -1,4 +1,4 @@
-#+TITLE: Advent of Code
+#+TITLE: Advent of Code '2015
 #+DESCRIPTION: My solutions for tasks from "Advent of Code" (2015)
 
 * Progress
@@ -7,7 +7,7 @@
 3. [X] Day 3: Perfectly Spherical Houses in a Vacuum
 4. [X] Day 4: The Ideal Stocking Stuffer
 5. [X] Day 5: Doesn't He Have Intern-Elves For This?
-6. [ ]
+6. [X] Day 6: Probably a Fire Hazard
 7. [ ]
 8. [ ]
 9. [ ]
