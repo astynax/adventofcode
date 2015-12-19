@@ -1,7 +1,7 @@
 module Day1 where
 
 import Data.List (foldl')
-import Data.Maybe (catMaybes)
+import Data.Maybe (mapMaybe)
 
 data Move  = Up | Down
 
@@ -12,7 +12,7 @@ main :: IO ()
 main = readFile "inputs/day1.txt" >>= render . solve . parse
 
 parse :: String -> [Move]
-parse = catMaybes . map toMove
+parse = mapMaybe toMove
   where
     toMove '(' = Just Up
     toMove ')' = Just Down

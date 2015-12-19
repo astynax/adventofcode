@@ -1,7 +1,7 @@
 module Day3 where
 
 import Data.List (nub)
-import Data.Maybe (catMaybes)
+import Data.Maybe (mapMaybe)
 
 data Direction = N | S | E | W
 
@@ -19,7 +19,7 @@ main = readFile "inputs/day3.txt" >>= render . solve2 . parse
 
 
 parse :: String -> [Direction]
-parse = catMaybes . map toDirection
+parse = mapMaybe toDirection
   where
     toDirection '^' = Just N
     toDirection 'v' = Just S
