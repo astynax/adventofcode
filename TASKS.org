@@ -21,7 +21,7 @@ For example:
 - ~())~ and ~))(~ both result in floor ~-1~ (the first basement level).
 - ~)))~ and ~)())())~ both result in floor ~-3~.
 
-To what floor do the instructions take Santa?
+To *what floor* do the instructions take Santa?
 ** part 2
 Now, given the same instructions, find the position of the first
 character that causes him to enter the basement (floor ~-1~).
@@ -33,7 +33,8 @@ For example:
 - ~)~ causes him to enter the basement at character position ~1~.
 - ~()())~ causes him to enter the basement at character position ~5~.
 
-What is the position of the character that causes Santa to first enter the basement?
+*What is the position* of the character that causes Santa to first
+enter the basement?
 * Day 2: I Was Told There Would Be No Math
 ** part 1
 The elves are running low on wrapping paper, and so they need to submit
@@ -54,8 +55,8 @@ of wrapping paper plus ~6~ square feet of slack, for a total of ~58~ square feet
 - A present with dimensions ~1x1x10~ requires ~2*1 + 2*10 + 2*10 = 42~ square feet
 of wrapping paper plus ~1~ square foot of slack, for a total of ~43~ square feet.
 
-All numbers in the elves' list are in feet. How many total square feet
-of wrapping paper should they order?
+All numbers in the elves' list are in feet. *How many total square feet
+of wrapping paper* should they order?
 ** part 2
 The elves are also running low on ribbon. Ribbon is all the same width, so
 they only have to worry about the length they need to order, which they
@@ -76,7 +77,7 @@ for a total of ~34~ feet.
 to wrap the present plus ~1*1*10 = 10~ feet of ribbon for the bow,
 for a total of ~14~ feet.
 
-How many total feet of ribbon should they order?
+*How many total feet of ribbon* should they order?
 * Day 3: Perfectly Spherical Houses in a Vacuum
 ** part 1
 Santa is delivering presents to an infinite two-dimensional grid of houses.
@@ -89,7 +90,7 @@ another present to the house at his new location.
 
 However, the elf back at the north pole has had a little too much eggnog,
 and so his directions are a little off, and Santa ends up visiting some
-houses more than once. How many houses receive at least one present?
+houses more than once. *How many houses receive at least one present*?
 
 For example:
 
@@ -108,7 +109,7 @@ to the same starting house), then take turns moving based on instructions
 from the elf, who is eggnoggedly reading from the same script as the
 previous year.
 
-This year, how many houses receive at least one present?
+This year, *how many houses receive at least one present*?
 
 For example:
 
@@ -127,8 +128,8 @@ girls and boys.
 To do this, he needs to find /MD5/ hashes which, in /hexadecimal/, start
 with at least five zeroes. The input to the MD5 hash is some secret
 key (your puzzle input, given below) followed by a number in decimal.
-To mine AdventCoins, you must find Santa the lowest positive number
-(no leading zeroes: ~1, 2, 3, ...~) that produces such a hash.
+To mine AdventCoins, you must find Santa the *lowest positive number*
+(no leading zeroes: ~1, 2, 3, ...~) *that produces such a hash*.
 
 For example:
 
@@ -139,7 +140,7 @@ and it is the lowest such number to do so.
 to make an MD5 hash starting with five zeroes is ~1048970~; that is,
 the MD5 hash of ~pqrstuv1048970~ looks like ~000006136ef...~.
 ** part 2
-Now find one that starts with six zeroes.
+Now find *one that starts with six zeroes*.
 * Day 5: Doesn't He Have Intern-Elves For This?
 ** part 1
 Santa needs help figuring out which strings in his text file are
@@ -165,7 +166,7 @@ even though the letters used by different rules overlap.
 - ~haegwjzuvuyypxyu~ is naughty because it contains the string ~xy~.
 - ~dvszwmarrgswjxmb~ is naughty because it contains only one vowel.
 
-How many strings are nice?
+*How many strings are nice*?
 ** part 2
 Realizing the error of his ways, Santa has switched to a better model of
 determining whether a string is naughty or nice. None of the old rules apply,
@@ -190,7 +191,7 @@ with a single letter between them.
 - ~ieodomkazucvgmuy~ is naughty because it has a repeating letter with one
 between (~odo~), but no pair that appears twice.
 
-How many strings are nice under these new rules?
+*How many strings are nice* under these new rules?
 * Day 6: Probably a Fire Hazard
 ** part 1
 Because your neighbors keep defeating you in the holiday house decorating
@@ -218,7 +219,7 @@ turning off the ones that were on, and turning on the ones that were off.
 - ~turn off 499,499 through 500,500~ would turn off (or leave off) the
 middle four lights.
 
-After following the instructions, how many lights are lit?
+After following the instructions, *how many lights are lit*?
 ** part2
 You just finish implementing your winning light pattern when you realize you
 mistranslated Santa's message from Ancient Nordic Elvish.
@@ -235,10 +236,74 @@ those lights by ~1~, to a minimum of zero.
 The phrase ~toggle~ actually means that you should increase the brightness of
 those lights by ~2~.
 
-What is the total brightness of all lights combined after following Santa's
+What is the *total brightness of all lights* combined after following Santa's
 instructions?
 
 For example:
 
 - ~turn on 0,0 through 0,0~ would increase the total brightness by ~1~.
 - ~toggle 0,0 through 999,999~ would increase the total brightness by ~2000000~.
+* Day 7: Some Assembly Required
+** part 1
+This year, Santa brought little Bobby Tables a set of wires and
+[[https://en.wikipedia.org/wiki/Bitwise_operation][bitwise logic gates]]! Unfortunately, little Bobby is a little under the
+recommended age range, and he needs help assembling the circuit.
+
+Each wire has an identifier (some lowercase letters) and can carry a
+16-bit signal (a number from ~0~ to ~65535~). A signal is provided to
+each wire by a gate, another wire, or some specific value. Each wire
+can only get a signal from one source, but can provide its signal to
+multiple destinations. A gate provides no signal until all of its
+inputs have a signal.
+
+The included instructions booklet describes how to connect the parts
+together: ~x AND y -> z~ means to connect wires ~x~ and ~y~ to an ~AND~ gate,
+ and then connect its output to wire ~z~.
+
+For example:
+
+- ~123 -> x~ means that the signal ~123~ is provided to wire ~x~.
+- ~x AND y -> z~ means that the [[https://en.wikipedia.org/wiki/Bitwise_operation#AND][bitwise AND]] of wire ~x~ and wire ~y~
+is provided to wire ~z~.
+- ~p LSHIFT 2 -> q~ means that the value from wire ~p~ is [[https://en.wikipedia.org/wiki/Logical_shift][left-shifted]]
+by ~2~ and then provided to wire ~q~.
+- ~NOT e -> f~ means that the [[https://en.wikipedia.org/wiki/Bitwise_operation#NOT][bitwise complement]] of the value from wire ~e~
+is provided to wire ~f~.
+
+Other possible gates include ~OR~ ([[https://en.wikipedia.org/wiki/Bitwise_operation#OR][bitwise OR]]) and ~RSHIFT~ ([[https://en.wikipedia.org/wiki/Logical_shift][right-shift]]).
+If, for some reason, you'd like to emulate the circuit instead, almost
+all programming languages (for example, C, JavaScript, or Python)
+provide operators for these gates.
+
+For example, here is a simple circuit:
+
+#+BEGIN_SRC text
+123 -> x
+456 -> y
+x AND y -> d
+x OR y -> e
+x LSHIFT 2 -> f
+y RSHIFT 2 -> g
+NOT x -> h
+NOT y -> i
+#+END_SRC
+
+After it is run, these are the signals on the wires:
+
+#+BEGIN_SRC
+d: 72
+e: 507
+f: 492
+g: 114
+h: 65412
+i: 65079
+x: 123
+y: 456
+#+END_SRC
+
+In little Bobby's kit's instructions booklet (provided as your puzzle input),
+*what signal is ultimately provided to wire a*?
+** part 2
+Now, take the signal you got on wire ~a~, override wire ~b~ to that signal,
+and reset the other wires (including wire ~a~).
+*What new signal is ultimately provided to wire a*?
