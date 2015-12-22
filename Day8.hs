@@ -1,4 +1,3 @@
-{-# LANGUAGE OverloadedStrings #-}
 module Day8 where
 
 type Code     = String
