@@ -1,11 +1,14 @@
 module Day6 where
 
-import Data.List (foldl')
-import Data.Maybe (fromMaybe)
-import Data.Map.Strict (Map, fromList, mergeWithKey, empty, size)
+import           Data.List       (foldl')
+import           Data.Map.Strict (Map, empty, fromList, mergeWithKey, size)
+import           Data.Maybe      (fromMaybe)
 
-data State  = On | Off deriving Eq
-data Action = Turn State | Toggle deriving Eq
+data State    = On
+              | Off deriving Eq
+
+data Action   = Turn State
+              | Toggle deriving Eq
 
 type Coords   = (Int, Int)
 type Grid     = Map Coords ()
@@ -22,12 +25,11 @@ parse :: String -> [Input]
 parse = map parseOne . lines
   where
     parseOne i =
-      let badInput = error $ "Bad input: " ++ i
-          (c1, c2, act) = case words i of
+      let (c1, c2, act) = case words i of
             ["toggle",      f, "through", t] -> (f, t, Toggle)
             ["turn", "on",  f, "through", t] -> (f, t, Turn On)
             ["turn", "off", f, "through", t] -> (f, t, Turn Off)
-            _ -> badInput
+            _ -> error $ "Bad input: " ++ i
       in  (act, parseCoords c1, parseCoords c2)
 
     parseCoords :: String -> Coords

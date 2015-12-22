@@ -1,7 +1,8 @@
+{-# LANGUAGE LambdaCase #-}
 module Day3 where
 
-import Data.List (nub)
-import Data.Maybe (mapMaybe)
+import           Data.List  (nub)
+import           Data.Maybe (mapMaybe)
 
 data Direction = N | S | E | W
 
@@ -15,17 +16,26 @@ start = (0, 0)
 
 
 main :: IO ()
-main = readFile "inputs/day3.txt" >>= render . solve2 . parse
+main = do
+  input <- parse <$> readFile "inputs/day3.txt"
+
+  putStrLn "Part 1:"
+  render $ solve input
+
+  putStrLn "Part 1:"
+  render $ solve2 input
 
 
 parse :: String -> [Direction]
 parse = mapMaybe toDirection
   where
-    toDirection '^' = Just N
-    toDirection 'v' = Just S
-    toDirection '>' = Just E
-    toDirection '<' = Just W
-    toDirection  _  = Nothing
+    toDirection =
+      \case
+        '^' -> Just N
+        'v' -> Just S
+        '>' -> Just E
+        '<' -> Just W
+        _   -> Nothing
 
 
 -- | Solver for the 1st subtask
@@ -37,8 +47,9 @@ solve = numberOfUniques . locations
 solve2 :: [Direction] -> Solution
 solve2 = numberOfUniques . go [start] start start
   where
-    go acc l1 l2  []    = l1 : l2 : acc
-    go acc l1 l2 (d:ds) = go (l1 : acc) l2 (move d l1) ds
+    go acc l1 l2 = \case
+      []     -> l1 : l2 : acc
+      (d:ds) -> go (l1 : acc) l2 (move d l1) ds
 
 
 -- | Naive solver for the 2nd subtask (TODO: why it works wrong?)
@@ -50,9 +61,13 @@ solve2' ds =
   in  numberOfUniques $ ls1 ++ ls2
 
 
+render :: Solution -> IO ()
+render = print
+
+--- helpers
+
 locations :: [Direction] -> [Location]
 locations = scanr move start
-
 
 move :: Direction -> Location -> Location
 move d (x, y) =
@@ -67,10 +82,6 @@ split :: [a] -> ([a], [a])
 split = foldr go ([], [])
   where
     go x (xs, ys) = (ys, x : xs)
-
-
-render :: Solution -> IO ()
-render = print
 
 
 numberOfUniques :: Eq a => [a] -> Int

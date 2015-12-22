@@ -6,12 +6,14 @@ type Input    = [Code]
 type Solution = Int
 
 main :: IO ()
-main =
-  putStrLn "Part 1:" >> run (solve calculate)
-  >>
-  putStrLn "Part 2:" >> run (solve calculate2)
-  where
-    run f = readFile "inputs/day8.txt" >>= render . f . parse
+main = do
+  input <- parse <$> readFile "inputs/day8.txt"
+
+  putStrLn "Part 1:"
+  render $ solve calculate input
+
+  putStrLn "Part 2:"
+  render $ solve calculate2 input
 
 parse :: String -> Input
 parse = lines
@@ -21,6 +23,7 @@ solve = (sum .) . map
 
 render :: Solution -> IO ()
 render = print
+
 
 calculate :: Code -> Int
 calculate c = codeLength c - byteLength c
@@ -32,7 +35,8 @@ codeLength :: Code -> Int
 codeLength = length
 
 -- this solution gets a "wrong" number
--- byteLength = length . (read :: String -> String)
+byteLength' :: Code -> Int
+byteLength' = length . (read :: String -> String)
 
 byteLength :: Code -> Int
 byteLength = (+ (-2)) . go 0

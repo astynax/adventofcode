@@ -3,6 +3,7 @@ module Day9 where
 import           Data.List       (foldl', intercalate, nub)
 import qualified Data.Map        as M
 import           Data.Map.Strict (Map, empty, insertWith, toList)
+import           Data.Maybe      (fromMaybe)
 import           GHC.Exts        (sortWith)
 
 type Location = String
@@ -37,10 +38,9 @@ parse = foldl' insert empty . lines
                  in insertWith   (++) f [(d, t)]
                     $ insertWith (++) t [(d, f)]
                     m
-
     parseLine x =
       case words x of
-        (from : "to" : to : "=" : dist : []) -> (from, to, read dist)
+        [from, "to", to, "=", dist] -> (from, to, read dist)
         _ -> error $ "Bad subroute: " ++ x
 
 
@@ -84,7 +84,7 @@ starts :: Input -> [Location]
 starts = nub . map fst . toList
 
 (!?) :: Map String a -> String -> a
-(!?) m k = maybe (error $ "Key error: " ++ k) id $ M.lookup k m
+(!?) m k = fromMaybe (error $ "Key error: " ++ k) $ M.lookup k m
 
 --- selfcheck
 

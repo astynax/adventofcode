@@ -121,8 +121,6 @@ unaryOp timeout f  inp out t =
 directTo :: UnaryOp a
 directTo = unaryOp 1 id
 
---- boolean logic
-
 --- signal constructing helpers
 
 touch :: WireName -> a -> Signal a
@@ -144,11 +142,12 @@ step sys@(System _ [] _)  = sys
 step sys@(System c ((sigTime, eff) : restSignals) currentTime)
   | sigTime > currentTime =
     sys { time = currentTime + 1 }
+
   | otherwise =
-    let (wire, val)  = eff (fst . (c !?))
-        (_, behs)    = c !? wire
-        wireSignals  = map ($ currentTime) behs
-        newSignals   = sortWith fst $ restSignals ++ wireSignals
+    let (wire, val) = eff (fst . (c !?))
+        (_, behs)   = c !? wire
+        wireSignals = map ($ currentTime) behs
+        newSignals  = sortWith fst $ restSignals ++ wireSignals
     in  sys { circuit = insert wire (val, behs) c
             , signals = newSignals
             }
@@ -189,57 +188,63 @@ parseWorksFine =
      &&
      length (toList c) == 8
      &&
-     contains c (zip
-                 ["x", "y", "d", "e", "f", "g", "h", "i"]
-                 $ replicate 8 0)
+     contains c
+     (zip
+      ["x", "y", "d", "e", "f", "g", "h", "i"]
+      $ replicate 8 0)
 
 
 simulatesAnExampleProperly :: Bool
 simulatesAnExampleProperly =
-  let (c, ss) = parse example
-      c' = circuit $ simulate $ system c ss
-  in c' `contains` [("d", 72),
-                    ("e", 507),
-                    ("f", 492),
-                    ("g", 114),
-                    ("h", 65412),
-                    ("i", 65079),
-                    ("x", 123),
-                    ("y", 456)]
+  let cir = circuit . simulate . uncurry system $ parse example
+  in contains cir
+     [ ("d", 72)
+     , ("e", 507)
+     , ("f", 492)
+     , ("g", 114)
+     , ("h", 65412)
+     , ("i", 65079)
+     , ("x", 123)
+     , ("y", 456)]
 
 simulationWorksFine :: Bool
 simulationWorksFine =
-  let andB :: BinaryOp Bool
-      andB = binaryOp 5 (&&)
+  let
+    andB :: BinaryOp Bool
+    andB = binaryOp 5 (&&)
 
-      notB :: UnaryOp Bool
-      notB = unaryOp 2 not
+    notB :: UnaryOp Bool
+    notB = unaryOp 2 not
 
-      cir :: Circuit Bool
-      cir = fromList [ ("a", (False, [ andB "a" "b" "c"
-                                     , notB "a" "d"]))
-                     , ("b", (False, [ andB "a" "b" "c"
-                                     , notB "b" "e"]))
-                     , ("c", (False, []))
-                     , ("d", (True,  []))
-                     , ("e", (True,  []))
-                     ]
-      cir' = circuit
-             $ simulate
-             $ system cir [ touch "a" True
-                          , touch "b" True ]
+    cir :: Circuit Bool
+    cir =
+      fromList
+      [ ("a", (False, [ andB "a" "b" "c"
+                      , notB "a" "d"]))
+      , ("b", (False, [ andB "a" "b" "c"
+                      , notB "b" "e"]))
+      , ("c", (False, []))
+      , ("d", (True,  []))
+      , ("e", (True,  []))
+      ]
+    cir' =
+      circuit . simulate $ system cir
+      [ touch "a" True
+      , touch "b" True ]
   in
-   cir  `contains` [("a", False),
-                    ("b", False),
-                    ("c", False),
-                    ("d", True),
-                    ("e", True)]
+    contains cir
+    [ ("a", False)
+    , ("b", False)
+    , ("c", False)
+    , ("d", True)
+    , ("e", True)]
    &&
-   cir' `contains` [("a", True),
-                    ("b", True),
-                    ("c", True),
-                    ("d", False),
-                    ("e", False)]
+    contains cir'
+    [ ("a", True)
+    , ("b", True)
+    , ("c", True)
+    , ("d", False)
+    , ("e", False)]
 
 
 --- other helpers

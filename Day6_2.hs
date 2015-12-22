@@ -1,9 +1,9 @@
 module Day6_2 where
 
-import Day6 hiding (main, solve, update, Grid)
+import           Data.List       (foldl')
+import           Data.Map.Strict (Map, empty, fromList, mergeWithKey, toList)
 
-import Data.List (foldl')
-import Data.Map.Strict (Map, fromList, mergeWithKey, empty, toList)
+import           Day6            hiding (Grid, main, solve, update)
 
 
 type Grid = Map Coords Int
@@ -32,10 +32,10 @@ update g act cs =
           (\_ old _ -> Just (max (old - 1) 0), rejectNew, 0)
   in  mergeWithKey merge id apply g (mkPatch patchValue)
   where
-    keepNew         = id
-    rejectNew       = const empty
+    keepNew   = id
+    rejectNew = const empty
 
-    mkPatch = fromList . zip cs . repeat
+    mkPatch   = fromList . zip cs . repeat
 
 -- selfcheck
 

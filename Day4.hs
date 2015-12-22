@@ -1,9 +1,10 @@
 -- stack --install-ghc runghc --package cryptohash
 module Day4 where
 
-import Prelude hiding (take)
-import Data.ByteString.Char8 (pack, append, ByteString, take)
-import Crypto.Hash (digestToHexByteString, hash, Digest, MD5)
+import           Crypto.Hash           (Digest, MD5, digestToHexByteString,
+                                        hash)
+import           Data.ByteString.Char8 (ByteString, append, pack, take)
+import           Prelude               hiding (take)
 
 type Guess = (Int, ByteString)
 
@@ -11,15 +12,25 @@ secret :: ByteString
 secret = pack "iwrupvqb"
 
 main :: IO ()
-main = print . fst . head . filter (isGood . snd) . map (mkGuess secret) $ [1..]
+main = do
+  putStrLn "Part 1:"
+  runFor 5
+
+  putStrLn "Part 2:"
+  runFor 6
+
+  where
+    runFor n =
+      print . fst . head
+      . filter (isGood n . snd)
+      . map (mkGuess secret) $ [1..]
 
 mkGuess :: ByteString -> Int -> Guess
 mkGuess sec cnt =
   (,) cnt . hash' . append sec . pack . show $ cnt
 
-isGood :: ByteString -> Bool
--- isGood = (== pack "000000") . take 6 -- for the 1st subtask
-isGood = (== pack "000000") . take 6
+isGood :: Int -> ByteString -> Bool
+isGood n = (== pack "000000") . take n
 
 hash' :: ByteString -> ByteString
 hash' = digestToHexByteString . md5

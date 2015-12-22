@@ -6,16 +6,22 @@ type Test     = Input -> Bool
 
 main :: IO ()
 main = do
-  putStrLn "part #1" >> runWith isNice
-  putStrLn "part #2" >> runWith isNice2
+  input <- parse <$> readFile "inputs/day5.txt"
+
+  putStrLn "Part 1:"
+  runWith isNice input
+
+  putStrLn "part 2:"
+  runWith isNice2 input
+
   where
-    runWith f = readFile "inputs/day5.txt" >>= render . solveWith f . parse
+    runWith f = render . solveWith f
 
 parse :: String -> [Input]
 parse = lines
 
 solveWith :: Test -> [Input] -> Solution
-solveWith = (length .) . filter
+solveWith f = length . filter f
 
 render :: Solution -> IO ()
 render = print

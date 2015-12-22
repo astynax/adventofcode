@@ -1,7 +1,7 @@
 module Day1 where
 
-import Data.List (foldl')
-import Data.Maybe (mapMaybe)
+import           Data.List  (foldl')
+import           Data.Maybe (mapMaybe)
 
 data Move  = Up | Down
 
