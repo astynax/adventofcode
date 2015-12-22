@@ -11,7 +11,7 @@
 7. [X] Day 7: Some Assembly Required
 8. [X] Day 8: Matchsticks
 9. [X] Day 9: All in a Single Night
-10. [ ] Day 10:
+10. [X] Day 10: Elves Look, Elves Say
 11. [ ] Day 11:
 12. [ ] Day 12:
 13. [ ] Day 13:
