@@ -4,20 +4,22 @@ type Input    = _
 type Solution = _
 
 main :: IO ()
-main =
-  putStrLn "Part 1:" >> run solve
-  >>
-  putStrLn "Part 2:" >> run solve2
-  where
-    run f = readFile "inputs/day_.txt"_ >>= render . f . parse
+main = do
+  input <- parse <$> readFile "inputs/day_.txt"_
+
+  putStrLn "Part 1:"
+  render $ solve input
+
+  putStrLn "Part 2:"
+  render $ solve2 input
 
 parse :: String -> [Input]
 parse = undefined
 
-solve :: [Input] -> Solution
+solve :: Input -> Solution
 solve = undefined
 
-solve2 :: [Input] -> Solution
+solve2 :: Input -> Solution
 solve2 = undefined
 
 render :: Solution -> IO ()
