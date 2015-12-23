@@ -14,7 +14,7 @@
 10. [X] Day 10: Elves Look, Elves Say
 11. [X] Day 11: Corporate Policy
 12. [X] Day 12: JSAbacusFramework.io
-13. [ ] Day 13:
+13. [X] Day 13: Knights of the Dinner Table
 14. [ ] Day 14:
 15. [ ] Day 15:
 16. [ ] Day 16:
