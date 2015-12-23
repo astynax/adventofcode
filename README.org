@@ -15,7 +15,7 @@
 11. [X] Day 11: Corporate Policy
 12. [X] Day 12: JSAbacusFramework.io
 13. [X] Day 13: Knights of the Dinner Table
-14. [ ] Day 14:
+14. [X] Day 14: Reindeer Olympics
 15. [ ] Day 15:
 16. [ ] Day 16:
 17. [ ] Day 17:
