@@ -2,6 +2,9 @@
 
 * Day 1: Not Quite Lisp
 ** part 1
+:PROPERTIES:
+:ANSWER:   280
+:END:
 Santa is trying to deliver presents in a large apartment building,
 but he can't find the right floor - the directions he got are a
 little confusing. He starts on the ground floor (floor ~0~) and
@@ -23,6 +26,9 @@ For example:
 
 To *what floor* do the instructions take Santa?
 ** part 2
+:PROPERTIES:
+:ANSWER:   1797
+:END:
 Now, given the same instructions, find the position of the first
 character that causes him to enter the basement (floor ~-1~).
 The first character in the instructions has position ~1~, the second
@@ -37,6 +43,9 @@ For example:
 enter the basement?
 * Day 2: I Was Told There Would Be No Math
 ** part 1
+:PROPERTIES:
+:ANSWER:   1606483
+:END:
 The elves are running low on wrapping paper, and so they need to submit
 an order for more. They have a list of the dimensions
 (length ~l~, width ~w~, and height ~h~) of each present, and only want
@@ -58,6 +67,9 @@ of wrapping paper plus ~1~ square foot of slack, for a total of ~43~ square feet
 All numbers in the elves' list are in feet. *How many total square feet
 of wrapping paper* should they order?
 ** part 2
+:PROPERTIES:
+:ANSWER:   3842356
+:END:
 The elves are also running low on ribbon. Ribbon is all the same width, so
 they only have to worry about the length they need to order, which they
 would again like to be exact.
@@ -80,6 +92,9 @@ for a total of ~14~ feet.
 *How many total feet of ribbon* should they order?
 * Day 3: Perfectly Spherical Houses in a Vacuum
 ** part 1
+:PROPERTIES:
+:ANSWER:   2592
+:END:
 Santa is delivering presents to an infinite two-dimensional grid of houses.
 
 He begins by delivering a present to the house at his starting location,
@@ -101,6 +116,9 @@ to the house at his starting/ending location.
 - ~^v^v^v^v^v~ delivers a bunch of presents to some very lucky children
 at only ~2~ houses.
 ** part 2
+:PROPERTIES:
+:ANSWER:   2360
+:END:
 The next year, to speed up the process, Santa creates a robot version
 of himself, Robo-Santa, to deliver presents with him.
 
@@ -121,6 +139,9 @@ end up back where they started.
 one direction and Robo-Santa going the other.
 * Day 4: The Ideal Stocking Stuffer
 ** part 1
+:PROPERTIES:
+:ANSWER:   346386
+:END:
 Santa needs help /mining/ some AdventCoins (very similar to /bitcoins/)
 to use as gifts for all the economically forward-thinking little
 girls and boys.
@@ -140,9 +161,15 @@ and it is the lowest such number to do so.
 to make an MD5 hash starting with five zeroes is ~1048970~; that is,
 the MD5 hash of ~pqrstuv1048970~ looks like ~000006136ef...~.
 ** part 2
+:PROPERTIES:
+:ANSWER:   9958218
+:END:
 Now find *one that starts with six zeroes*.
 * Day 5: Doesn't He Have Intern-Elves For This?
 ** part 1
+:PROPERTIES:
+:ANSWER:   236
+:END:
 Santa needs help figuring out which strings in his text file are
 naughty or nice.
 
@@ -168,6 +195,9 @@ even though the letters used by different rules overlap.
 
 *How many strings are nice*?
 ** part 2
+:PROPERTIES:
+:ANSWER:   51
+:END:
 Realizing the error of his ways, Santa has switched to a better model of
 determining whether a string is naughty or nice. None of the old rules apply,
 as they are all clearly ridiculous.
@@ -194,6 +224,9 @@ between (~odo~), but no pair that appears twice.
 *How many strings are nice* under these new rules?
 * Day 6: Probably a Fire Hazard
 ** part 1
+:PROPERTIES:
+:ANSWER:   400410
+:END:
 Because your neighbors keep defeating you in the holiday house decorating
 contest year after year, you've decided to deploy one million lights
 in a ~1000x1000~ grid.
@@ -220,7 +253,10 @@ turning off the ones that were on, and turning on the ones that were off.
 middle four lights.
 
 After following the instructions, *how many lights are lit*?
-** part2
+** part 2
+:PROPERTIES:
+:ANSWER:   15343601
+:END:
 You just finish implementing your winning light pattern when you realize you
 mistranslated Santa's message from Ancient Nordic Elvish.
 
@@ -245,6 +281,9 @@ For example:
 - ~toggle 0,0 through 999,999~ would increase the total brightness by ~2000000~.
 * Day 7: Some Assembly Required
 ** part 1
+:PROPERTIES:
+:ANSWER:   3176
+:END:
 This year, Santa brought little Bobby Tables a set of wires and
 [[https://en.wikipedia.org/wiki/Bitwise_operation][bitwise logic gates]]! Unfortunately, little Bobby is a little under the
 recommended age range, and he needs help assembling the circuit.
@@ -304,11 +343,17 @@ y: 456
 In little Bobby's kit's instructions booklet (provided as your puzzle input),
 *what signal is ultimately provided to wire a*?
 ** part 2
+:PROPERTIES:
+:ANSWER:   14710
+:END:
 Now, take the signal you got on wire ~a~, override wire ~b~ to that signal,
 and reset the other wires (including wire ~a~).
 *What new signal is ultimately provided to wire a*?
 * Day 8: Matchsticks
 ** part 1
+:PROPERTIES:
+:ANSWER:   1371
+:END:
 Space on the sleigh is limited this year, and so Santa will be bringing
 his list as a digital copy. He needs to know how much space it will take
 up when stored.
@@ -346,6 +391,9 @@ For example, given the four strings above, the total number of characters
 of string code ~(2 + 5 + 10 + 6 = 23)~ minus the total number of characters
 in memory for string values ~(0 + 3 + 7 + 1 = 11)~ is ~23 - 11 = 12~.
 ** part 2
+:PROPERTIES:
+:ANSWER:   2117
+:END:
 Now, let's go the other way. In addition to finding the number of characters
 of code, you should now encode each code representation as a new string and
 find the number of characters of the new encoded representation, including
@@ -367,6 +415,9 @@ representation (~23~, just like in the first part of this puzzle)
 is ~42 - 23 = 19~.
 * Day 9: All in a Single Night
 ** part 1
+:PROPERTIES:
+:ANSWER:   251
+:END:
 Every year, Santa manages to deliver all of his presents in a single night.
 
 This year, however, he has some new locations to visit; his elves have provided
@@ -398,6 +449,9 @@ answer is ~605~ in this example.
 
 *What is the distance of the shortest route*?
 ** part 2
+:PROPERTIES:
+:ANSWER:   898
+:END:
 The next year, just to show off, Santa decides to take the route with the
 *longest distance* instead.
 
@@ -410,6 +464,9 @@ via (for example) ~Dublin -> London -> Belfast~.
 *What is the distance of the longest route*?
 * Day 10: Elves Look, Elves Say
 ** part 1
+:PROPERTIES:
+:ANSWER:   492982
+:END:
 Today, the Elves are playing a game called [[https://en.wikipedia.org/wiki/Look-and-say_sequence][look-and-say]]. They take turns
 making sequences by reading aloud the previous sequence and using that
 reading as the next sequence. For example, ~211~ is read as
@@ -433,6 +490,9 @@ Starting with the digits in your puzzle input, apply this process ~40~ times.
 
 Your puzzle input is ~1321131112~.
 ** part 2
+:PROPERTIES:
+:ANSWER:   6989950
+:END:
 Neat, right? You might also enjoy hearing [[https://www.youtube.com/watch?v%3Dea7lJkEhytA][John Conway talking about this sequence]]
 (that's *Conway of Conway's Game of Life* fame).
 
@@ -442,6 +502,9 @@ Now, starting again with the digits in your puzzle input, apply this process
 Your puzzle input is still ~1321131112~.
 * Day 11: Corporate Policy
 ** part 1
+:PROPERTIES:
+:ANSWER:   vzbxxyzz
+:END:
 Santa's previous password expired, and he needs help choosing a new one.
 
 To help him remember his new password after the old one expires, Santa has
@@ -482,9 +545,15 @@ Given Santa's current password (your puzzle input), *what should his next passwo
 
 Your puzzle input is ~vzbxkghb~.
 ** part 2
+:PROPERTIES:
+:ANSWER:   vzcaabcc
+:END:
 Santa's password expired again. *What's the next one?*
 * Day 12: JSAbacusFramework.io
 ** part 1
+:PROPERTIES:
+:ANSWER:   156366
+:END:
 Santa's Accounting-Elves need help balancing the books after a recent
 order. Unfortunately, their accounting software uses a peculiar storage
 format. That's where you come in.
@@ -505,6 +574,9 @@ You will not encounter any strings containing numbers.
 
 What is the *sum of all numbers* in the document?
 ** part 2
+:PROPERTIES:
+:ANSWER:   96852
+:END:
 Uh oh - the Accounting-Elves have realized that they double-counted
 everything *red*.
 
@@ -520,6 +592,9 @@ entire structure is ignored.
 - ~[1,"red",5]~ has a sum of ~6~, because ~"red"~ in an array has no effect.
 * Day 13: Knights of the Dinner Table
 ** part 1
+:PROPERTIES:
+:ANSWER:   709
+:END:
 In years past, the holiday feast with your family hasn't gone so well.
 Not everyone gets along! This year, you resolve, will be different.
 You're going to find the *optimal seating arrangement* and avoid all those
@@ -575,6 +650,9 @@ happiness of ~330~.
 What is the *total change in happiness* for the optimal seating arrangement
 of the actual guest list?
 ** part 2
+:PROPERTIES:
+:ANSWER:   668
+:END:
 In all the commotion, you realize that you forgot to seat yourself. At this
 point, you're pretty apathetic toward the whole thing, and your happiness
 wouldn't really go up or down regardless of who you sit next to. You assume
@@ -587,6 +665,9 @@ What is the *total change* in happiness for the optimal seating arrangement
 that actually includes yourself?
 * Day 14: Reindeer Olympics
 ** part 1
+:PROPERTIES:
+:ANSWER:   2660
+:END:
 This year is the Reindeer Olympics! Reindeer can fly at high speeds,
 but must rest occasionally to recover their energy. Santa would like
 to know which of his reindeer is fastest, and so he has them race.
@@ -617,6 +698,9 @@ at 1000 seconds).
 Given the descriptions of each reindeer (in your puzzle input), after
 exactly ~2503~ seconds, *what distance has the winning reindeer traveled?*
 ** part 2
+:PROPERTIES:
+:ANSWER:   1256
+:END:
 Seeing how reindeer move in bursts, Santa decides he's not pleased with
 the old scoring system.
 
