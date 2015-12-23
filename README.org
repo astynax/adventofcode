@@ -13,7 +13,7 @@
 9. [X] Day 9: All in a Single Night
 10. [X] Day 10: Elves Look, Elves Say
 11. [X] Day 11: Corporate Policy
-12. [ ] Day 12:
+12. [X] Day 12: JSAbacusFramework.io
 13. [ ] Day 13:
 14. [ ] Day 14:
 15. [ ] Day 15:

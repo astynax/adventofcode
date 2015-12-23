@@ -13,7 +13,7 @@ main = do
   putStrLn "Part 2:"
   render $ solve2 input
 
-parse :: String -> [Input]
+parse :: String -> Input
 parse = undefined
 
 solve :: Input -> Solution
