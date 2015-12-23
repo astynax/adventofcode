@@ -1,21 +1,23 @@
 #+TITLE: Advent of Code '2015
 #+DESCRIPTION: My solutions for tasks from "Advent of Code" (2015)
 
+[[file:TASKS.org][Task descriptions]]
+
 * Progress
-1. [X] Day 1: Not Quite Lisp
-2. [X] Day 2: I Was Told There Would Be No Math
-3. [X] Day 3: Perfectly Spherical Houses in a Vacuum
-4. [X] Day 4: The Ideal Stocking Stuffer
-5. [X] Day 5: Doesn't He Have Intern-Elves For This?
-6. [X] Day 6: Probably a Fire Hazard
-7. [X] Day 7: Some Assembly Required
-8. [X] Day 8: Matchsticks
-9. [X] Day 9: All in a Single Night
-10. [X] Day 10: Elves Look, Elves Say
-11. [X] Day 11: Corporate Policy
-12. [X] Day 12: JSAbacusFramework.io
-13. [X] Day 13: Knights of the Dinner Table
-14. [X] Day 14: Reindeer Olympics
+1. [X] Day 1: Not Quite Lisp [[file:TASKS.org::*Day%201:%20Not%20Quite%20Lisp][...]]
+2. [X] Day 2: I Was Told There Would Be No Math [[file:TASKS.org::*Day%202:%20I%20Was%20Told%20There%20Would%20Be%20No%20Math][...]]
+3. [X] Day 3: Perfectly Spherical Houses in a Vacuum [[file:TASKS.org::*Day%203:%20Perfectly%20Spherical%20Houses%20in%20a%20Vacuum][...]]
+4. [X] Day 4: The Ideal Stocking Stuffer [[file:TASKS.org::*Day%204:%20The%20Ideal%20Stocking%20Stuffer][...]]
+5. [X] Day 5: Doesn't He Have Intern-Elves For This? [[file:TASKS.org::*Day%205:%20Doesn't%20He%20Have%20Intern-Elves%20For%20This?][...]]
+6. [X] Day 6: Probably a Fire Hazard [[file:TASKS.org::*Day%206:%20Probably%20a%20Fire%20Hazard][...]]
+7. [X] Day 7: Some Assembly Required [[file:TASKS.org::*Day%207:%20Some%20Assembly%20Required][...]]
+8. [X] Day 8: Matchsticks [[file:TASKS.org::*Day%208:%20Matchsticks][...]]
+9. [X] Day 9: All in a Single Night [[file:TASKS.org::*Day%209:%20All%20in%20a%20Single%20Night][...]]
+10. [X] Day 10: Elves Look, Elves Say [[file:TASKS.org::*Day%2010:%20Elves%20Look,%20Elves%20Say][...]]
+11. [X] Day 11: Corporate Policy [[file:TASKS.org::*Day%2011:%20Corporate%20Policy][...]]
+12. [X] Day 12: JSAbacusFramework.io [[file:TASKS.org::*Day%2012:%20JSAbacusFramework.io][...]]
+13. [X] Day 13: Knights of the Dinner Table [[file:TASKS.org::*Day%2013:%20Knights%20of%20the%20Dinner%20Table][...]]
+14. [X] Day 14: Reindeer Olympics [[file:TASKS.org::*Day%2014:%20Reindeer%20Olympics][...]]
 15. [ ] Day 15:
 16. [ ] Day 16:
 17. [ ] Day 17:

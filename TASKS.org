@@ -1,6 +1,7 @@
 #+TITLE: Tasks
 
 * Day 1: Not Quite Lisp
+[[file:inputs/day1.txt][Input file]]
 ** part 1
 :PROPERTIES:
 :ANSWER:   280
@@ -42,6 +43,7 @@ For example:
 *What is the position* of the character that causes Santa to first
 enter the basement?
 * Day 2: I Was Told There Would Be No Math
+[[file:inputs/day2.txt][Input file]]
 ** part 1
 :PROPERTIES:
 :ANSWER:   1606483
@@ -91,6 +93,7 @@ for a total of ~14~ feet.
 
 *How many total feet of ribbon* should they order?
 * Day 3: Perfectly Spherical Houses in a Vacuum
+[[file:inputs/day3.txt][Input file]]
 ** part 1
 :PROPERTIES:
 :ANSWER:   2592
@@ -166,6 +169,7 @@ the MD5 hash of ~pqrstuv1048970~ looks like ~000006136ef...~.
 :END:
 Now find *one that starts with six zeroes*.
 * Day 5: Doesn't He Have Intern-Elves For This?
+[[file:inputs/day5.txt][Input file]]
 ** part 1
 :PROPERTIES:
 :ANSWER:   236
@@ -223,6 +227,7 @@ between (~odo~), but no pair that appears twice.
 
 *How many strings are nice* under these new rules?
 * Day 6: Probably a Fire Hazard
+[[file:inputs/day6.txt][Input file]]
 ** part 1
 :PROPERTIES:
 :ANSWER:   400410
@@ -280,6 +285,7 @@ For example:
 - ~turn on 0,0 through 0,0~ would increase the total brightness by ~1~.
 - ~toggle 0,0 through 999,999~ would increase the total brightness by ~2000000~.
 * Day 7: Some Assembly Required
+[[file:inputs/day7.txt][Input file]]
 ** part 1
 :PROPERTIES:
 :ANSWER:   3176
@@ -350,6 +356,7 @@ Now, take the signal you got on wire ~a~, override wire ~b~ to that signal,
 and reset the other wires (including wire ~a~).
 *What new signal is ultimately provided to wire a*?
 * Day 8: Matchsticks
+[[file:inputs/day8.txt][Input file]]
 ** part 1
 :PROPERTIES:
 :ANSWER:   1371
@@ -414,6 +421,7 @@ length ~(6 + 9 + 16 + 11 = 42)~ minus the characters in the original code
 representation (~23~, just like in the first part of this puzzle)
 is ~42 - 23 = 19~.
 * Day 9: All in a Single Night
+[[file:inputs/day9.txt][Input file]]
 ** part 1
 :PROPERTIES:
 :ANSWER:   251
@@ -550,6 +558,7 @@ Your puzzle input is ~vzbxkghb~.
 :END:
 Santa's password expired again. *What's the next one?*
 * Day 12: JSAbacusFramework.io
+[[file:inputs/day12.txt][Input file]]
 ** part 1
 :PROPERTIES:
 :ANSWER:   156366
@@ -591,6 +600,7 @@ object is ignored.
 entire structure is ignored.
 - ~[1,"red",5]~ has a sum of ~6~, because ~"red"~ in an array has no effect.
 * Day 13: Knights of the Dinner Table
+[[file:inputs/day13.txt][Input file]]
 ** part 1
 :PROPERTIES:
 :ANSWER:   709
@@ -664,6 +674,7 @@ involve you a score of ~0~.
 What is the *total change* in happiness for the optimal seating arrangement
 that actually includes yourself?
 * Day 14: Reindeer Olympics
+[[file:inputs/day14.txt][Input file]]
 ** part 1
 :PROPERTIES:
 :ANSWER:   2660
