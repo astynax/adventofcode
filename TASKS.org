@@ -733,3 +733,101 @@ Dancer would win (if the race ended at 1000 seconds).
 
 Again given the descriptions of each reindeer (in your puzzle input),
 after exactly ~2503~ seconds, *how many points does the winning reindeer have?*
+* Day 15: Science for Hungry People
+[[file:inputs/day15.txt][Input file]]
+** part 1
+Today, you set out on the task of perfecting your milk-dunking cookie recipe.
+All you have to do is find the right balance of ingredients.
+
+Your recipe leaves room for exactly ~100~ teaspoons of ingredients.
+You make a list of the *remaining ingredients you could use to finish
+the recipe* (your puzzle input) and their *properties per teaspoon*:
+
+- ~capacity~ (how well it helps the cookie absorb milk)
+- ~durability~ (how well it keeps the cookie intact when full of milk)
+- ~flavor~ (how tasty it makes the cookie)
+- ~texture~ (how it improves the feel of the cookie)
+- ~calories~ (how many calories it adds to the cookie)
+
+You can only measure ingredients in whole-teaspoon amounts accurately,
+and you have to be accurate so you can reproduce your results in the future.
+The *total score* of a cookie can be found by adding up each of the
+properties (negative totals become ~0~) and then multiplying together
+everything except calories.
+
+For instance, suppose you have these two ingredients:
+
+#+BEGIN_SRC
+Butterscotch: capacity -1, durability -2, flavor 6, texture 3, calories 8
+Cinnamon: capacity 2, durability 3, flavor -2, texture -1, calories 3
+#+END_SRC
+
+Then, choosing to use ~44~ teaspoons of butterscotch and ~56~ teaspoons
+of cinnamon (because the amounts of each ingredient must add up to ~100~)
+would result in a cookie with the following properties:
+
+- A ~capacity~ of ~44*-1 + 56*2 = 68~
+- A ~durability~ of ~44*-2 + 56*3 = 80~
+- A ~flavor~ of ~44*6 + 56*-2 = 152~
+- A ~texture~ of ~44*3 + 56*-1 = 76~
+
+Multiplying these together (~68 * 80 * 152 * 76~, ignoring ~calories~ for
+ now) results in a total score of ~62842880~, which happens to be the
+best score possible given these ingredients. If any properties had
+produced a negative total, it would have instead become zero, causing
+the whole score to multiply to zero.
+
+Given the ingredients in your kitchen and their properties, what is
+the *total score* of the highest-scoring cookie you can make?
+** TODO part 2
+* Day 16: Aunt Sue
+[[file:inputs/day16.txt][Input file]]
+** part 1
+Your Aunt Sue has given you a wonderful gift, and you'd like to send her
+a thank you card. However, there's a small problem: she signed it
+"From, Aunt Sue".
+
+You have ~500~ Aunts named "Sue".
+
+So, to avoid sending the card to the wrong person, you need to figure
+out which Aunt Sue (which you conveniently number ~1~ to ~500~, for sanity)
+gave you the gift. You open the present and, as luck would have it, good
+ol' Aunt Sue got you a My First Crime Scene Analysis Machine! Just what
+you wanted. Or needed, as the case may be.
+
+The My First Crime Scene Analysis Machine (MFCSAM for short) can detect
+a few specific compounds in a given sample, as well as how many distinct
+kinds of those compounds there are. According to the instructions, these
+are what the MFCSAM can detect:
+
+- ~children~, by human DNA age analysis.
+- ~cats~. It doesn't differentiate individual breeds.
+- Several seemingly random breeds of ~dog~: [[https://en.wikipedia.org/wiki/Samoyed_%2528dog%2529][samoyeds]], [[https://en.wikipedia.org/wiki/Pomeranian_%2528dog%2529][pomeranians]],
+[[https://en.wikipedia.org/wiki/Akita_%2528dog%2529][akitas]], and [[https://en.wikipedia.org/wiki/Vizsla][vizslas]].
+- ~goldfish~. No other kinds of fish.
+- ~trees~, all in one group.
+- ~cars~, presumably by exhaust or gasoline or something.
+- ~perfumes~, which is handy, since many of your Aunts Sue wear a few kinds.
+
+In fact, many of your Aunts Sue have many of these. You put the wrapping
+from the gift into the MFCSAM. It beeps inquisitively at you a few times
+and then prints out a message on [[https://en.wikipedia.org/wiki/Ticker_tape][ticker tape]]:
+
+#+BEGIN_SRC
+children: 3
+cats: 7
+samoyeds: 2
+pomeranians: 3
+akitas: 0
+vizslas: 0
+goldfish: 5
+trees: 3
+cars: 2
+perfumes: 1
+#+END_SRC
+
+You make a list of the things you can remember about each Aunt Sue.
+Things missing from your list aren't zero - you simply don't remember the value.
+
+What is the *number* of the Sue that got you the gift?
+** TODO part 2
