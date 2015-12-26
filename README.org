@@ -20,12 +20,12 @@
 14. [X] Day 14: Reindeer Olympics [[file:TASKS.org::*Day%2014:%20Reindeer%20Olympics][...]]
 15. [ ] Day 15: Science for Hungry People [[file:TASKS.org::*Day%2015:%20Science%20for%20Hungry%20People][...]]
 16. [ ] Day 16: Aunt Sue [[file:TASKS.org::*Day%2016:%20Aunt%20Sue][...]]
-17. [ ] Day 17:
-18. [ ] Day 18:
-19. [ ] Day 19:
-20. [ ] Day 20:
-21. [ ] Day 21:
-22. [ ] Day 22:
-23. [ ] Day 23:
-24. [ ] Day 24:
-25. [ ] Day 25:
+17. [ ] Day 17: No Such Thing as Too Much [[file:TASKS.org::*Day%2017:%20No%20Such%20Thing%20as%20Too%20Much][...]]
+18. [ ] Day 18: Like a GIF For Your Yard [[file:TASKS.org::*Day%2018:%20Like%20a%20GIF%20For%20Your%20Yard][...]]
+19. [ ] Day 19: Medicine for Rudolph [[file:TASKS.org::*Day%2019:%20Medicine%20for%20Rudolph][...]]
+20. [ ] Day 20: Infinite Elves and Infinite Houses [[file:TASKS.org::*Day%2020:%20Infinite%20Elves%20and%20Infinite%20Houses][...]]
+21. [ ] Day 21: RPG Simulator 20XX [[file:TASKS.org::*Day%2021:%20RPG%20Simulator%2020XX][...]]
+22. [ ] Day 22: Wizard Simulator 20XX [[file:TASKS.org::*Day%2022:%20Wizard%20Simulator%2020XX][...]]
+23. [ ] Day 23: Opening the Turing Lock [[file:TASKS.org::*Day%2023:%20Opening%20the%20Turing%20Lock][...]]
+24. [ ] Day 24: It Hangs in the Balance [[file:TASKS.org::*Day%2024:%20It%20Hangs%20in%20the%20Balance][...]]
+25. [ ] Day 25: Let It Snow [[file:TASKS.org::*Day%2025:%20Let%20It%20Snow][...]]
