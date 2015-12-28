@@ -1,4 +1,4 @@
-module Day7 where
+module Day07 where
 
 import           Data.Bits       (shiftL, shiftR, xor, (.&.), (.|.))
 import           Data.List       (foldl')

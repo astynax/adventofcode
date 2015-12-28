@@ -1,9 +1,9 @@
-module Day6_2 where
+module Day06_2 where
 
 import           Data.List       (foldl')
 import           Data.Map.Strict (Map, empty, fromList, mergeWithKey, toList)
 
-import           Day6            hiding (Grid, main, solve, update)
+import           Day06            hiding (Grid, main, solve, update)
 
 
 type Grid = Map Coords Int

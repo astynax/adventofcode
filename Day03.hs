@@ -1,5 +1,5 @@
 {-# LANGUAGE LambdaCase #-}
-module Day3 where
+module Day03 where
 
 import           Data.List  (nub)
 import           Data.Maybe (mapMaybe)

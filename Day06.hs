@@ -1,4 +1,4 @@
-module Day6 where
+module Day06 where
 
 import           Data.List       (foldl')
 import           Data.Map.Strict (Map, empty, fromList, mergeWithKey, size)

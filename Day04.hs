@@ -1,5 +1,5 @@
 -- stack --install-ghc runghc --package cryptohash
-module Day4 where
+module Day04 where
 
 import           Crypto.Hash           (Digest, MD5, digestToHexByteString,
                                         hash)

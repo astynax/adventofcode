@@ -1,4 +1,4 @@
-module Day9 where
+module Day09 where
 
 import           Data.List       (foldl', intercalate, nub)
 import qualified Data.Map        as M

@@ -1,4 +1,4 @@
-module Day5 where
+module Day05 where
 
 type Input    = String
 type Solution = Int

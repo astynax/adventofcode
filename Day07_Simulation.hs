@@ -9,6 +9,8 @@ import           Data.Word           (Word16)
 import           GHC.Exts            (sortWith)
 import           Prelude             hiding (lookup)
 
+import           Day07               (example)
+
 
 type Time        = Int
 type WireName    = String
@@ -164,18 +166,6 @@ trace = go 0
                  else go tt s'
 
 --- selftesting
-
-example :: String
-example =
-  "123 -> x\n\
-  \456 -> y\n\
-  \x AND y -> d\n\
-  \x OR y -> e\n\
-  \x LSHIFT 2 -> f\n\
-  \y RSHIFT 2 -> g\n\
-  \NOT x -> h\n\
-  \NOT y -> i"
-
 
 worksFine :: Bool
 worksFine = parseWorksFine && simulationWorksFine
