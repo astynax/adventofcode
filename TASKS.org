@@ -736,6 +736,9 @@ after exactly ~2503~ seconds, *how many points does the winning reindeer have?*
 * Day 15: Science for Hungry People
 [[file:inputs/day15.txt][Input file]]
 ** part 1
+:PROPERTIES:
+:ANSWER:   18965440
+:END:
 Today, you set out on the task of perfecting your milk-dunking cookie recipe.
 All you have to do is find the right balance of ingredients.
 
@@ -779,7 +782,24 @@ the whole score to multiply to zero.
 
 Given the ingredients in your kitchen and their properties, what is
 the *total score* of the highest-scoring cookie you can make?
-** TODO part 2
+** part 2
+:PROPERTIES:
+:ANSWER:   15862900
+:END:
+Your cookie recipe becomes wildly popular! Someone asks if you can make
+another recipe that has exactly ~500~ calories per cookie (so they can use
+it as a meal replacement). Keep the rest of your award-winning process the
+same (~100~ teaspoons, same ingredients, same scoring system).
+
+For example, given the ingredients above, if you had instead selected ~40~
+teaspoons of butterscotch and ~60~ teaspoons of cinnamon (which still adds
+to ~100~), the total calorie count would be ~40*8 + 60*3 = 500~. The total
+score would go down, though: only ~57600000~, the best you can do in such
+trying circumstances.
+
+Given the ingredients in your kitchen and their properties, what is the
+*total score* of the highest-scoring cookie you can make with a calorie
+total of ~500~?
 * Day 16: Aunt Sue
 [[file:inputs/day16.txt][Input file]]
 ** part 1
