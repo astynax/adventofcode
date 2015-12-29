@@ -871,6 +871,9 @@ What is the *number* of the real Aunt Sue?
 * Day 17: No Such Thing as Too Much
 [[file:inputs/day17.txt][Input file]]
 ** part 1
+:PROPERTIES:
+:ANSWER:   1638
+:END:
 The elves bought too much eggnog again - ~150~ liters this time. To fit it
 all into your refrigerator, you'll need to move it into smaller containers.
 You take an inventory of the capacities of the available containers.
@@ -886,7 +889,20 @@ do it:
 
 Filling all containers entirely, *how many different combinations of
 containers* can exactly fit all ~150~ liters of eggnog?
-** TODO part 2
+** part 2
+:PROPERTIES:
+:ANSWER:   17
+:END:
+While playing with all the containers in the kitchen, another load of eggnog
+arrives! The shipping and receiving department is requesting as many containers
+as you can spare.
+
+Find the minimum number of containers that can exactly fit all 150 liters
+of eggnog. *How many different ways* can you fill that number of containers and
+still hold exactly ~150~ litres?
+
+In the example above, the minimum number of containers was two. There were
+three ways to use that many containers, and so the answer there would be ~3~.
 * Day 18: Like a GIF For Your Yard
 [[file:inputs/day18.txt][Input file]]
 ** part 1
