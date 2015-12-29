@@ -47,15 +47,14 @@ combinations v xs =
     ixs = zip [0 :: Int ..] xs
 
 combinations' :: Volume -> [Volume] -> [[Volume]]
-combinations' v _ | v < 0  = []
-                  | v == 0 = [[]]
-combinations' v [x] = [[x] | x == v]
-combinations' v vs  =
-  case vs of
-    [] -> []
-    (x:xs') -> map (x :) (combinations' (v - x) xs')
-               ++
-               combinations' v xs'
+combinations' 0 _         = [[]]
+combinations' v _ | v < 0 = []
+combinations' _ []        = []
+combinations' v [x]       = [[x] | x == v]
+combinations' v (x:xs)    =
+  map (x :) (combinations' (v - x) xs)
+  ++
+  combinations' v xs
 
 --- selfcheck
 
