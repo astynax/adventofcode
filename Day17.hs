@@ -37,14 +37,13 @@ render = print . length
 
 -- naive version
 combinations :: Volume -> [Volume] -> [[Volume]]
-combinations v xs =
+combinations v =
   filter ((v ==) . sum)
   . map (map snd)
   . nub . map (sortWith fst)
   . concatMap inits
-  $ ixs : permutations ixs
-  where
-    ixs = zip [0 :: Int ..] xs
+  . permutations
+  . zip [0 :: Int ..]
 
 combinations' :: Volume -> [Volume] -> [[Volume]]
 combinations' 0 _         = [[]]
